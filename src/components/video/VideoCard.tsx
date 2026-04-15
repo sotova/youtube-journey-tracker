@@ -69,7 +69,7 @@ export function VideoCard({ video }: VideoCardProps) {
             <span className="text-[10px] text-gray-400 font-medium">
               {new Date(video.publishedAt).toLocaleDateString()}
             </span>
-            {watchCount > 0 && (
+            {(watchCount || 0) > 0 && (
               <div className="flex items-center gap-1 text-[10px] font-bold text-blue-500">
                 <Eye size={10} />
                 {watchCount} Views
